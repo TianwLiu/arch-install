@@ -19,7 +19,8 @@ fi
 printf "Network status detecting ... "
 if [[ $online == true ]];then
 	ping archlinux.org -c 2 > /dev/null
-
+	
+	wait
 	if [[ $? ]];then
 		printf "online\n"
 	else

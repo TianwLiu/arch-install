@@ -88,7 +88,7 @@ printf "ok\n"
 #Initramfs
 if [[ $online == false ]];then
 	printf "mkinitcpio -P ... "
-	mkinitcpio -P > /root/arch-install/mkinitcpio.log
+	mkinitcpio -P > /root/arch-install/mkinitcpio.log 2>&1
 	printf "ok\n"
 fi
 
@@ -97,11 +97,11 @@ fi
 
 #Set Boot loader
 #printf "Please set boot loader by yourself. You can set up via GRUG which may have been installed\n"
-printf "Installing bootloader ... "
+printf "Installing bootloader ... \n"
 if [[ $bootmode == "bios" ]];then
-	grub-install --target=i386-pc $grubtarget > /root/arch-install/grub-install.log
-	grub-mkconfig -o /boot/grub/grub.cfg > /root/arch-install/grub-mkconfig.log
-	printf "ok\n"
+	grub-install --target=i386-pc $grubtarget 2>&1 | tee /root/arch-install/grub-install.log
+	grub-mkconfig -o /boot/grub/grub.cfg 2>&1 | tee /root/arch-install/grub-mkconfig.log
+	printf "Bootloader install ok\n"
 elif [[ $bootmode == "uefi" ]];then
 	printf "Current bootmode is uefi,Install boot loader by user\n"
 fi
