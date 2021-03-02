@@ -2,7 +2,7 @@ Arch-Linux INSTALL
 ========================
 
 ## fdisk, mkfs.ext4, mkswap
-1. [fidsk] to build partitions (Note: If BIOS-GPT or UEFI, 
+1. [fdisk] to build partitions (Note: If BIOS-GPT or UEFI, 
 maybe more partitions needed, refer to **[Install Bootloader]**)  
 2. [mkfs.ext4] /dev/root_partition
 3. [mkfs.ext4] /dev/other_partition  
