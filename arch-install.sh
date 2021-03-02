@@ -72,7 +72,8 @@ printf "ok\n"
 
 #arch-chroot
 printf "arch-chroot ... "
-arch-chroot /mnt
+arch-chroot /root /bin/bash -x << 
+'EOT'
 printf "ok\n"
 
 mkdir -p /root/arch-install
@@ -167,10 +168,14 @@ if [[ $bootmode == "bios" ]];then
 elif [[ $bootmode == "uefi" ]];then
 	printf "Current bootmode is uefi,Install boot loader by user\n"
 fi
+EOT
 
 printf "\n===================================================\n"
+
+printf "====================INTALL=FINSH===================\n"
+printf "===================================================\n"
 #Root Password
-printf "Please set password by yourself\n"
+printf "Please arch-root /mnt and set password by yourself\n"
 
 #Reboot
 printf "When you done, please exit by yourself\n"
@@ -181,7 +186,6 @@ printf "Have a Good Day!"
 printf "=================================================\n"
 printf "By the way, you can check this help message on README.MD"
 exit 0
-
 
 
 
