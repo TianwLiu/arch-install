@@ -109,14 +109,14 @@ EOT
 
 printf "\n===================================================\n"
 
-printf "====================INTALL=FINSH===================\n"
+printf "====================INSTALL=FINISH===================\n"
 printf "===================================================\n"
 #Root Password
 printf "Please arch-root /mnt and set password by yourself\n"
 
 #Reboot
 printf "When you done, please exit by yourself\n"
-printf "[exit] to exit chroot environment\n",
+printf "[exit] to exit chroot environment\n"
 printf "[umount -R /mnt] to umount\n"
 printf "[reboot] to reboot\n"
 printf "Have a Good Day!"
