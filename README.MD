@@ -10,7 +10,7 @@ maybe more partitions needed, refer to **[Install Bootloader]**)
  
 ## mount, swapon
 1. [mount] /dev/root_partition to /mnt 
-2. [mount] /dev/other_partition to /mnt/path/to/mountpoint
+2. [mount] /dev/other_partition to /mnt/path/to/mountpoint(If mountpoint not exist,mkdir /mnt/path/to/mountpoint)
 3. [swapon] /dev/swap_partition
 
 ## ./arch-install.sh
