@@ -40,7 +40,7 @@ maybe more partitions needed, refer to **[Install Bootloader]**)
 
 Error Fix
 ==============================
-## Install Bootloader (when program not done)
+## Install Bootloader (sometimes when program didn't do it successfully)
 
 #### BIOS
 1. grub-install --target=i386-pc /dev/sdX
